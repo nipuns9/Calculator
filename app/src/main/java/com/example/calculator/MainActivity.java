@@ -25,10 +25,12 @@ public class MainActivity<txtValue1> extends AppCompatActivity {
 
 
 
-    double answer;
 
 
-    public void addCount(View v){
+
+    public void calculate(View v){
+
+        String tag = v.getTag().toString();
 
         String value1 = txtValue1.getText().toString();
         String value2 = txtValue2.getText().toString();
@@ -36,7 +38,24 @@ public class MainActivity<txtValue1> extends AppCompatActivity {
         double v1 = Double.parseDouble(value1);
         double v2 = Double.parseDouble(value2);
 
-        answer= v1+v2;
+        double answer=0;
+
+       if (tag.equals("Add")){
+           answer = v1 + v2;
+       }
+
+        if (tag.equals("Sub")){
+            answer = v1 - v2;
+        }
+
+        if (tag.equals("Mul")){
+            answer = v1 * v2;
+        }
+
+        if (tag.equals("Div")){
+            answer = v1 / v2;
+        }
+
 
         lblAnswerbox.setText("" + answer);
     }
@@ -46,7 +65,7 @@ public class MainActivity<txtValue1> extends AppCompatActivity {
 
         txtValue1.setText(" ");
         txtValue2.setText(" ");
-        answer =0;
+        double answer =0;
         lblAnswerbox.setText(" ");
     }
 
