@@ -38,24 +38,14 @@ public class MainActivity<txtValue1> extends AppCompatActivity {
         double v1 = Double.parseDouble(value1);
         double v2 = Double.parseDouble(value2);
 
-        double answer=0;
+        double answer = 0;
 
-       if (tag.equals("Add")){
-           answer = v1 + v2;
+       switch (tag){
+           case "Add" : answer = v1 + v2; break;
+           case "Sub" : answer = v1 - v2; break;
+           case "Mul" : answer = v1 * v2; break;
+           case "Div" : answer = v1 / v2; break;
        }
-
-        if (tag.equals("Sub")){
-            answer = v1 - v2;
-        }
-
-        if (tag.equals("Mul")){
-            answer = v1 * v2;
-        }
-
-        if (tag.equals("Div")){
-            answer = v1 / v2;
-        }
-
 
         lblAnswerbox.setText("" + answer);
     }
