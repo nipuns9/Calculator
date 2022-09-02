@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/lblValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Value 1 :"
+        android:textColor="#2196F3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:text="Value 2 :"
+        android:textColor="#2196F3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblValue1" />
+
+    <TextView
+        android:id="@+id/lblAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Answer :"
+        android:textColor="#2196F3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+    <TextView
+        android:id="@+id/lblAnswerbox"
+        android:layout_width="275dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="28dp"
+        android:text="0"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/lblAnswer"
+        app:layout_constraintTop_toBottomOf="@+id/btnClear" />
+
+    <EditText
+        android:id="@+id/txtValue1"
+        android:layout_width="272dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Enter Value 1 "
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/lblValue1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtValue2"
+        android:layout_width="272dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Value 2"
+        android:inputType="numberDecimal"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/lblValue2"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue1" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="78dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="42dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="addCount"
+        android:text="+"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lblValue2" />
+
+    <Button
+        android:id="@+id/btnSub"
+        android:layout_width="78dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="subCount"
+        android:text="-"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMul"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAdd"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue2" />
+
+    <Button
+        android:id="@+id/btnMul"
+        android:layout_width="78dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="mulCount"
+        android:text="×"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnDiv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnSub"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue2" />
+
+    <Button
+        android:id="@+id/btnDiv"
+        android:layout_width="78dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#2196F3"
+        android:onClick="divCount"
+        android:text="÷"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnMul"
+        app:layout_constraintTop_toBottomOf="@+id/txtValue2" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="249dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTint="#F44336"
+        android:onClick="clearCount"
+        android:text="Clear"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top"
+        app:constraint_referenced_ids="btnMul,btnDiv,btnSub,btnAdd"
+        tools:layout_editor_absoluteY="148dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
