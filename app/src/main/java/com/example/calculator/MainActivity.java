@@ -41,44 +41,6 @@ public class MainActivity<txtValue1> extends AppCompatActivity {
         lblAnswerbox.setText("" + answer);
     }
 
-    public void subCount(View v) {
-
-        String value1 = txtValue1.getText().toString();
-        String value2 = txtValue2.getText().toString();
-
-        double v1 = Double.parseDouble(value1);
-        double v2 = Double.parseDouble(value2);
-
-        answer = v1 - v2;
-
-        lblAnswerbox.setText("" + answer);
-    }
-
-    public void mulCount(View v) {
-
-        String value1 = txtValue1.getText().toString();
-        String value2 = txtValue2.getText().toString();
-
-        double v1 = Double.parseDouble(value1);
-        double v2 = Double.parseDouble(value2);
-
-        answer = v1 * v2;
-
-        lblAnswerbox.setText("" + answer);
-    }
-
-    public void divCount(View v) {
-
-        String value1 = txtValue1.getText().toString();
-        String value2 = txtValue2.getText().toString();
-
-        double v1 = Double.parseDouble(value1);
-        double v2 = Double.parseDouble(value2);
-
-        answer = v1 / v2;
-
-        lblAnswerbox.setText("" + answer);
-    }
 
     public void clearCount(View v) {
 
